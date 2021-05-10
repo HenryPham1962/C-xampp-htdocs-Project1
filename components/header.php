@@ -30,31 +30,26 @@
                </a>
               </li>
              <li class="nav-item">
-                <a class="nav-link" href="admin.php">
+                <a class="nav-link" href="management.php">
                   <h6>Admin</h6>
                  </a>
               </li>
               <li class="nav-item">
-                 <a class="nav-link" href="registry.php">
-                   <h6>Registry</h6>
-                 </a>
-               </li>
-               <li class="nav-item">
                  <a class="nav-link" href="login.php">
-                   <h6>Log in</h6>
+                   <h6>User login</h6>
                  </a>
                </li>
            </ul>
               <!-- order -->
-           <ul class="navbar-nav d-flex flex-row">
-              <!-- Icons -->
+          <!-- <ul class="navbar-nav d-flex flex-row">
+             
               <li class="nav-item me-3 me-lg-2">
                 <a class="nav-link-primary" href="order.php">
                 Order
                 <i class="fas fa-shopping-cart"></i>
                 </a>
               </li>
-           </ul>
+           </ul> -->
          </div>
        </div>
   </nav>

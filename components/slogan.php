@@ -4,9 +4,8 @@
           <div class="d-flex justify-content-center align-items-center h-100">
             <div >
               <h2 class="mb-3">We are professionals</h2>
-              <h4 class="mb-3">and have to work in very patient way</h4>
-              <a class="btn btn-outline btn-lg" href="#" role="button"
-                >Promotion offers</a>
+              <h4 class="mb-3">and we work in very patient way</h4>
+             
             </div>
           </div>
      

@@ -40,7 +40,7 @@
              </li>                  
              <li class="nav-item">
                 <a class="nav-link" href="./admin.php">
-                <button class="btn btn-light" type="btn" name="Admin"> Admin</button>
+                <button class="btn btn-light" type="btn" name="Admin">Admin regist</button>
                  </a>
              </li>
           </ul>

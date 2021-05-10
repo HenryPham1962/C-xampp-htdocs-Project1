@@ -12,7 +12,7 @@
          <input type="text" name="adminname" placeholder="Admin name" required/><br><br>
          <input type="text" name="email" placeholder="Email" required/><br><br>
          <input type="password" name="password" placeholder="Password" required/><br><br>
-         <input type="text" name="admin_pwd" placeholder="Admin security" required/><br><br>
+         <input type="text" name="admin_role" placeholder="Admin security role number" required/><br><br>
        <button class="btn btn-info" type="submit" name="register_admin"> Register</button><br><br>
        </form>
     </div>
@@ -28,7 +28,7 @@ if (isset($_POST['register_admin'])) {
   $adminname =$_POST["adminname"];
   $email =$_POST["email"];
   $password= $_POST["password"];
-  $admin_pwd= $_POST["admin_pwd"];
+  $admin_role= $_POST["admin_role"];
  
  $servername = "localhost";
  $dbUsername = "root";
@@ -43,7 +43,7 @@ if (isset($_POST['register_admin'])) {
        //check validation
     $check = "SELECT adminname FROM admins WHERE adminname=? LIMIT 1";
     $password =md5($password);
-    $sql= "INSERT INTO admins (name, adminname, email, password, admin_pwd) VALUES ('$name','$adminname','$email','$password','$admin_pwd')";
+    $sql= "INSERT INTO admins (adminname, email, password, admin_role) VALUES ('$adminname','$email','$password','$admin_role')";
     $stmt = $conn->prepare($check);
     $stmt->bind_param("s",$adminname);
     $stmt->execute();

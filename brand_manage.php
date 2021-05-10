@@ -1,6 +1,7 @@
 <?php require ('./components/head.php');?>
 <?php include ('./components/navbar.php');?>
 <div class="container text-center">
+<?php include ('./components/brand.php');?>
       <form action="brand_manage.php" method= "POST"> 
          <div class ="form-group">
             <input type="text" name="brandname" placeholder="Brand name" required/><br><br> 

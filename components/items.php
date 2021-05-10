@@ -1,5 +1,5 @@
-<nav class="navbar navbar-light bg-light right">
-  <div class="container-fluid">
+<nav class="navbar navbar-light bg-light">
+  <div class="container justify-content-center">
     <form class="d-flex input-group w-auto" method="POST">
       <input
         type="search"
@@ -15,16 +15,14 @@
     </form>
   </div>
 </nav>
-
-
-  <section class="hair_equipments">
-   <div class= "row" style="margin: 2%">
-      <h5 >Hair equipments</h5><br>
+ <section class="hair_equipments">
+  <div class= "row" style="margin: 2%">
+      <h5  >Hair equipments</h5><br>
           <div class="col-lg-2 col-md-12 mb-2">
             <div class="card text-center m-1">
               <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
                 <img
-                  src="./img.equipments/hair-dryer.jpg"
+                  src="./img.equip/dryer.jpg"
                   class="img-fluid"/> 
                 <a href="#!">
                   <div class="mask" style="background-color: rgba(251, 251, 251, 0.15)"></div>
@@ -36,15 +34,14 @@
                   <p class="text-warning">15% off, only for $6.20  </p>                           
                   Some contents 
                 </p>
-                <a href="order.php" class="btn btn-info">Move to cart</a>
-              </div>
+               </div>
             </div> 
           </div>
           <div class="col-lg-2 col-md-12 mb-2">
             <div class="card text-center m-1">
               <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
                 <img
-                  src="./img.equipments/hair-massager.jpg"
+                  src="./img.equip/massager.jpg"
                   class="img-fluid"/>
                 <a href="#!">
                   <div class="mask" style="background-color: rgba(251, 251, 251, 0.15)"></div>
@@ -56,15 +53,14 @@
                 <p class="text-warning">50% off, only for $5.35</p>
                 Some contents 
                 </p>
-                <a href="order.php" class="btn btn-info">Move to cart</a>
-              </div>
+               </div>
             </div>
           </div>
           <div class="col-lg-2 col-md-12 mb-2">
             <div class="card text-center m-1">
               <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
                 <img
-                  src="./img.equipments/hair-spa-cap.jpg"
+                  src="./img.equip/spa-cap.jpg"
                   class="img-fluid"/>
                 <a href="#!">
                   <div class="mask" style="background-color: rgba(251, 251, 251, 0.15)"></div>
@@ -76,15 +72,14 @@
                 <p class="text-warning">25% off, only for $5.50</p> 
                 Some contents 
                 </p>
-                <a href="order.php" class="btn btn-info">Move to cart</a>
-              </div>
+               </div>
             </div>
           </div>
           <div class="col-lg-2 col-md-12 mb-2">
             <div class="card text-center m-1">
               <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
                 <img
-                  src="./img.equipments/steamer.jpg"
+                  src="./img.equip/steamer.jpg"
                   class="img-fluid"/>
                 <a href="#!">
                   <div class="mask" style="background-color: rgba(251, 251, 251, 0.15)"></div>
@@ -95,15 +90,14 @@
                 <p class="card-text">
                 Some contents about guidelines for ease of its use and maintenance.
                 </p>
-                <a href="order.php" class="btn btn-info">Move to cart</a>
-              </div>
+               </div>
             </div> 
           </div>
           <div class="col-lg-2 col-md-12 mb-2">
             <div class="card text-center m-1">
               <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
                 <img
-                  src="./img.equipments/strayghtener.jpg"
+                  src="./img.equip/strayghtener.jpg"
                   class="img-fluid"/>
                 <a href="#!">
                   <div class="mask" style="background-color: rgba(251, 251, 251, 0.15)"></div>
@@ -114,15 +108,14 @@
                 <p class="card-text">
                 Some contents about guidelines for ease of its use and maintenance.
                 </p>
-                <a href="order.php" class="btn btn-info">Move to cart</a>
-              </div>
+               </div>
             </div>
           </div>
           <div class="col-lg-2 col-md-12 mb-2">
             <div class="card text-center m-1">
               <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
                 <img
-                  src="./img.equipments/spray-bottle.jpg"
+                  src="./img.equip/spray-bottle.jpg"
                   class="img-fluid"/>
                 <a href="#!">
                   <div class="mask" style="background-color: rgba(251, 251, 251, 0.15)"></div>
@@ -133,14 +126,13 @@
                 <p class="card-text">
                 Some contents about guidelines for ease of its use and maintenance.
                 </p>
-                <a href="order.php" class="btn btn-info">Move to cart</a>
-              </div>
+               </div>
             </div> 
           </div>
      </div> 
    </section > 
 
-   <section class="hair_products">
+  <section class="hair_products">
     <div class= "row" style="margin: 2%">
        <h5 >Hair products</h5><br>
           <div class="col-lg-2 col-md-12 mb-2">
@@ -159,15 +151,14 @@
                 <p class="card-text">
                   Some card's content.
                 </p>
-                <a href="order.php" class="btn btn-info">Shop now</a>
-              </div>
+               </div>
             </div> 
           </div>
           <div class="col-lg-2 col-md-12 mb-2">
             <div class="card text-center m-1">
               <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
                 <img
-                  src="./img.products/hair-cream.jpeg"
+                  src="./img.products/cream.jpeg"
                   class="img-fluid"/>
                 <a href="#!">
                   <div class="mask" style="background-color: rgba(251, 251, 251, 0.15)"></div>
@@ -179,15 +170,14 @@
                 <p class="card-text">
                   Some card's content.
                 </p>
-                <a href="order.php" class="btn btn-info">Shop now</a>
-              </div>
+               </div>
             </div>
           </div>
           <div class="col-lg-2 col-md-12 mb-2">
             <div class="card text-center m-1">
               <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
                 <img
-                  src="./img.products/hair-masks.jpg"
+                  src="./img.products/masks.jpg"
                   class="img-fluid"
                 />
                 <a href="#!">
@@ -200,7 +190,6 @@
                 <p class="card-text">
                   Some card's content.
                 </p>
-                <a href="order.php" class="btn btn-info">Shop now</a>
               </div>
             </div>
           </div>
@@ -221,8 +210,7 @@
                 <p class="card-text">
                   Some card's content.
                 </p>
-                <a href="order.php" class="btn btn-info">Shop now</a>
-              </div>
+               </div>
             </div> 
           </div>
           <div class="col-lg-2 col-md-12 mb-2">
@@ -241,8 +229,7 @@
                 <p class="card-text">
                   Some card's content.
                 </p>
-                <a href="order.php" class="btn btn-info">Move to cart</a>
-              </div>
+               </div>
             </div> 
           </div>
           <div class="col-lg-2 col-md-12 mb-2">
@@ -262,8 +249,7 @@
                 <p class="card-text">
                   Some card's content.
                 </p>
-                <a href="order.php" class="btn btn-info">Move to cart</a>
-              </div>
+               </div>
             </div>
           </div>
          <div class= "row d-flex justify-content-center align-items-center" style="margin: 2%">
@@ -284,8 +270,7 @@
                 <p class="card-text">
                   Some card's content.
                 </p>
-                <a href="order.php" class="btn btn-info">Move to cart</a>
-              </div>
+               </div>
             </div>
           </div>
           <div class="col-lg-2 col-md-12 mb-2">
@@ -305,10 +290,9 @@
                 <p class="card-text">
                   Some card's content.
                 </p>
-                <a href="order.php" class="btn btn-info">Move to cart</a>
-              </div>
+             </div>
             </div> 
           </div>
          </div>  
-     </div> 
-  </section>
+     </div>
+  </section>  
