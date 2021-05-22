@@ -11,7 +11,7 @@ $dbPassword = "";
 $dbName ="hair_care";
 
     $errors= array();
-    $conn = new mysqli($servername,$dbUsername,$dbPassword,$dbName) or die (mysqli_error($mysqli));
+    $conn = new mysqli($servername,$dbUsername,$dbPassword,$dbName);
  
         $password = md5($password);
         $query = "SELECT * FROM users WHERE username='$username' AND password='$password'";

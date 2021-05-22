@@ -12,6 +12,7 @@
             <button class="btn btn-info" type="submit" name="item"> Save</button>
          </div>
       </form>
+     
   <?php
  $servername = "localhost";
  $dbUsername = "root";
@@ -98,16 +99,16 @@ if (isset($_POST['item'])) {
             $itemname = $_GET['itemname'];
             $brandname = $_GET['brandname'];
             $price = $_GET['price'];
-            $result= mb_substr($code,0,3);
+            $result= mb_substr($code,0,3); 
        if($result =="Equ"){
-            $update = "UPDATE tbl_equip SET (code= '$code', image='$image',itemname ='$itemname', brandname ='$brandname',price='$price')
+            $update = "UPDATE tbl_equip SET code= '$code', image='$image',itemname ='$itemname', brandname ='$brandname',price='$price'
              WHERE code= '$code'" or die (mysqli_error()); 
-            $stmt = $conn->prepare ($update);
+             $stmt = $conn->prepare ($update);
             $conn->query($update);
             echo "Equipment item has been updated";         
     } 
        elseif($result=="Pro"){
-        $update = "UPDATE tbl_products SET (code= '$code', image='$image',itemname ='$itemname', brandname ='$brandname',price='$price')
+        $update = "UPDATE tbl_products SET code= '$code', image='$image',itemname ='$itemname', brandname ='$brandname',price='$price' 
         WHERE code= '$code'" or die (mysqli_error()); 
          $stmt = $conn->prepare ($update);
          $conn->query($update);
@@ -118,14 +119,14 @@ if (isset($_POST['item'])) {
   ?>
    
   <div class="container justify-content-center">  
-       <table class="table table-striped table-responsive">
+       <table class="table table-striped table-responsive ">
           <thead>
           <tr>
-            <th>Item code </th>
-            <th>Image</th>
-            <th>Item name</th>
+            <th >Item code </th>
+            <th >Image</th>
+            <th >Item name</th>
             <th>Brand name</th>
-            <th>Price</th>
+            <th >Price</th>
             <th colspan="2">Action</th>
           </tr>
           </thead>
@@ -173,31 +174,28 @@ if (isset($_POST['item'])) {
              </td>
           </tr>
           <?php endwhile; ?>  
-       <form action="item_manage.php" method= "GET">   
+     <form action="item_manage.php" method= "GET">   
           <div class ="form-group">
              <tr>
                   <input type="hidden" name="id" value="<?php echo $id; ?>">
                <td> <input type="text" name="code" value="<?php echo $code; ?>"
-                   placeholder="Item code" required/> 
+                   placeholder="Item code" required/></td>
                <td> <input type="text" name="image" value="<?php echo $image; ?>"
-                   placeholder="Item image" required/>       
+                   placeholder="Item image" required/></td>     
                <td> <input type="text" name="itemname" value="<?php echo $itemname; ?>"
-                   placeholder="Item name" required/>
-               </td> 
+                   placeholder="Item name" required/></td> 
                <td>  
                    <input type="text" name="brandname" value="<?php echo $brandname; ?>"
-                   placeholder="Brand name" required/>
-               </td>
+                   placeholder="Brand name" required/></td>
                <td>
                    <input type="text" name="price" value="<?php echo $price; ?>"
-                   placeholder="Price" required/>
-               </td>
+                   placeholder="Price" required/></td>
                <td> 
-                <button class="btn btn-info" type="submit" name="update"> Update</button>
+                <button class="btn btn-info" type="submit" name="update" value="1"> Update</button>
               </td>           
             </tr>
           </div> 
-          </form>  
+         </form>  
       </table>
     </div>
  <?php require ('./components/footer.php');?>

@@ -12,7 +12,7 @@ $username = $_POST['username'];
 $email =  $_POST['email'];
 $password =  $_POST['password'];
 $gender = $_POST['gender'];
-$contactr= $_POST["contact"];
+$contact= $_POST["contact"];
 $address= $_POST["address"];
 //validation
 

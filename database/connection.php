@@ -14,7 +14,6 @@ class DBconn {
 		$conn = mysqli_connect($this->host,$this->user,$this->password,$this->database);
 		return $conn;
 	}
-	
 	function runQuery($query) {
 		$result = mysqli_query($this->conn,$query);
 		while($row=mysqli_fetch_assoc($result)) {
@@ -31,3 +30,15 @@ class DBconn {
 	}
 }
 ?>
+<!--class Database{
+    public function select($query){
+        $result = $this->link->query($query) or die($this->link->error.__LINE__);
+        if($result->num_rows > 0){
+            return $result;
+        }
+        else {
+            return false;
+        }
+    }
+}
+$db = new Database();-->

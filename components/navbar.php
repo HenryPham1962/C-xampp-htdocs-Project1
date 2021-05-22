@@ -29,11 +29,6 @@
                  </a>
              </li>
              <li class="nav-item">
-                <a class="nav-link" href="./invoice.php">
-                <button class="btn btn-light" type="submit" name="invoice"> Invoice</button>
-                 </a>
-             </li>
-             <li class="nav-item">
                 <a class="nav-link" href="./items.php">
                 <button class="btn btn-light" type="submit" name="items"> Items</button>
                  </a>

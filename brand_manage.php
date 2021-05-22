@@ -5,8 +5,7 @@
       <form action="brand_manage.php" method= "POST"> 
          <div class ="form-group">
             <input type="text" name="brandname" placeholder="Brand name" required/><br><br> 
-            <input type="text" name="itemname" placeholder="Item name" required/><br><br> 
-             <button class="btn btn-info" type="submit" name="brand"> Save</button><br><br>
+            <button class="btn btn-info" type="submit" name="brand"> Save</button><br><br>
          </div>
       </form>
   <?php
@@ -19,13 +18,9 @@
 $id= 0;     
 //$update =false;
 $brandname='';
-$itemname ='';
 if (isset($_POST['brand'])) {
-    
     $brandname = $_POST['brandname'];
-    $itemname = $_POST['itemname'];
-        
-        $sql = "INSERT INTO tbl_brand (brandname,itemname) VALUES('$brandname','$itemname')" 
+        $sql = "INSERT INTO tbl_brand (brandname) VALUES('$brandname')" 
         or die (mysqli_error());
         $stmt=$conn->prepare($sql);
         $conn->query($sql);  
@@ -50,23 +45,21 @@ if (isset($_POST['brand'])) {
     }
 }
     if (isset($_POST['update'])) {
-            $id =$_POST['id'];
+            $id =$_POST['brand_id'];
             $brandname = $_POST['brandname'];
-            $itemname = $_POST['itemname'];
-            $update = "UPDATE tbl_brand SET brandname ='$brandname',itemname ='$itemname'  WHERE id= '$id'" or die (mysqli_error()); 
+            $update = "UPDATE tbl_brand SET brandname ='$brandname' WHERE id= '$id'" or die (mysqli_error()); 
             $stmt = $conn->prepare ($update);
             $conn->query($update);
             echo "Brand has been updated"; 
         
     }    
   ?>
-  <div class="container text-center">  
-       <table class="table">
+  <div class="container justify-content-center">  
+       <table class="table table-striped table-responsive ">
           <thead>
             <tr>
               <th>Brand name</th>
-              <th>Item name</th>
-              <th colspan="2">Action</th>
+             <th colspan="2">Action</th>
             </tr>
           </thead>
           <?php 
@@ -80,26 +73,27 @@ if (isset($_POST['brand'])) {
           while ($row = $result->fetch_assoc()): ?>
           <tr>
              <td><?php echo $row['brandname'] ?></td>
-             <td><?php echo $row['itemname'] ?></td>
              <td>
-             <a href="brand_manage.php?edit=<?php echo $row['id'];?>" class="btn btn-primary">Edit</a>
-             <a href="brand_manage.php?delete=<?php echo $row['id'];?>" class="btn btn-danger">Delete</a>
+             <a href="brand_manage.php?edit=<?php echo $row['brand_id'];?>" class="btn btn-primary">Edit</a>
+             <a href="brand_manage.php?delete=<?php echo $row['brand_id'];?>" class="btn btn-danger">Delete</a>
              </td>
           </tr>
           <?php endwhile; ?>
-          <tr>
-                  <input type="hidden" name="id" value="<?php echo $id; ?>">
-             <td>  
+        <form action="item_manage.php" method= "POST"> 
+           <div class ="form-group">
+           <tr>
+                  <input type="hidden" name="brand_id" value="<?php echo $brand_id; ?>">
+              <td>  
                    <input type="text" name="brandname" value="<?php echo $brandname; ?>"
                    placeholder="Brand name" required/>
-             </td>
-             <td> <input type="text" name="itemname" value="<?php echo $itemname; ?>"
-                   placeholder="Item name" required/>
-             </td> 
+              </td>
+             
              <td> 
                 <button class="btn btn-primary" type="submit" name="update"> Update</button>
              </td>           
-          </tr>
+           </tr>
+          </div>
+        </form>    
       </table>
     </div>
  <?php require ('./components/footer.php');?>

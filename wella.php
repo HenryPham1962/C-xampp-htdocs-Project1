@@ -40,7 +40,6 @@ require_once("database/connection.php");
 	  case "empty":
 		unset($_SESSION["cart_item"]);
 	break;	
- 
 }
 }
 ?>
@@ -54,7 +53,7 @@ require_once("database/connection.php");
      <?php
      if(isset($_SESSION["cart_item"])){
       $total_quantity = 0;
-      $total_price = 0;
+      $subtotal = 0;
      ?>	
     <table class="tbl-cart" cellpadding="10" cellspacing="1">
       <tbody>
@@ -69,9 +68,11 @@ require_once("database/connection.php");
         <?php		
      foreach ($_SESSION["cart_item"] as $item){
         $item_price = $item["quantity"]*$item["price"];
+        $total_quantity += $item["quantity"];
+				$subtotal += ($item["price"]*$item["quantity"]);
 		?>  
 				<tr >
-				  <td> <img src="<?php echo $item["image"]; ?>"class="image col-lg-1"/>
+				  <td> <img src="<?php echo $item["image"]; ?>"class="image col-lg-2"/>
                     <?php echo $item["itemname"]; ?></td>
 				  <td><?php echo $item["code"]; ?></td>
 				  <td style="text-align:right;"><?php echo $item["quantity"]; ?></td>
@@ -79,18 +80,22 @@ require_once("database/connection.php");
 				  <td  style="text-align:right;"><?php echo "$ ". number_format($item_price,2); ?></td>
 				  <td style="text-align:center;"><a href="wella.php?action=remove&code=<?php echo $item["code"]; ?>" class="btnRemoveAction">
                   <i alt="Remove Item" class="far fa-trash-alt"></i></a></td>
-               </tr>
+         </tr>
 			<?php
-				$total_quantity += $item["quantity"];
-				$total_price += ($item["price"]*$item["quantity"]);
-   		}
+			}
 	    	?>
-
       <tr>
         <td colspan="2" align="right">Total:</td>
         <td align="right"><?php echo $total_quantity; ?></td>
-        <td align="right" colspan="2"><strong><?php echo "$ ".number_format($total_price, 2); ?></strong></td>
-        
+        <td align="right" colspan="2"><strong><?php echo "$ ".number_format($subtotal, 2); ?></strong></td>
+       </tr>
+       <tr>
+           <td></td> 
+           <td width="10%"><a href="equip_products.php" class="btn btn-block btn-info">Countinue shopping</a></td>
+           <form action="check_out.php"method="GET">
+             <td position="left" width="15%"><button type="submit" name="order" class="btn btn-block btn-warning" value="<?= ($subtotal);?>">
+             <i class="fab fa-amazon-pay">&nbsp;&nbsp;&nbsp; <?php echo "$ ".($subtotal); ?></i></button></td>  
+           </form> 
         </tr>
       </tbody>
      </table>		
@@ -105,7 +110,7 @@ require_once("database/connection.php");
 <div class="txt-heading ml-5">Products</div>
    <div class= "row" style="margin: 2%">
 	<?php 
-    $product_array = $db_handle->runQuery("SELECT * FROM tbl_products ORDER BY id ASC");
+    $product_array = $db_handle->runQuery("SELECT * FROM tbl_products ORDER BY prod_id ASC");
 	if (!empty($product_array)) { 
 		foreach($product_array as $key=>$value){
 	?>
